@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ruyahavuzu.financemoney.com">
+    package="ruyaci.financemoney.com">
    <application
-        android:label="Rüyahavuzu"
+        android:label="Rüyaci Rüya Tabirleri"
         android:name="${applicationName}"
         android:icon="@mipmap/logoicon">
         <activity
@@ -23,7 +23,7 @@
         </activity>
        <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9410328109595500~7051224355"/>
+            android:value="ca-app-pub-9410328109595500~2609131056"/>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />

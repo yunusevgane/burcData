@@ -45,6 +45,42 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:396948459576:android:bc266e1f476a825255d6cd",
+        "android_client_info": {
+          "package_name": "com.dovizkuruborsasi.kdv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396948459576-g0p346s9o235kig0bl0b7t8242foujq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxLU79gMrmdjWoPRvnI0fHuUuaE-gUBjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396948459576-g0p346s9o235kig0bl0b7t8242foujq2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "396948459576-io8icp8ur1kpb90tr5jncfn8k28kf9t3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.webyapar.ruyatabirleri"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:396948459576:android:351fd74508f081fc55d6cd",
         "android_client_info": {
           "package_name": "com.financemoney.kdv"

@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "ruyahavuzu.financemoney.com"
+        applicationId "ruyaci.financemoney.com"
         minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()

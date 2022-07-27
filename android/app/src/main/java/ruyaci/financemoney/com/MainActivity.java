@@ -1,4 +1,4 @@
-package ruyahavuzu.financemoney.com;
+package ruyaci.financemoney.com;
 
 import io.flutter.embedding.android.FlutterActivity;
 

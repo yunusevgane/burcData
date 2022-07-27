@@ -35,21 +35,21 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/ruyahavuzu/
+    - assets/ruyaci/
 
 flutter_app_name:
-  name: "Rüyahavuzu"
+  name: "Rüyaci Rüya Tabirleri"
 
 flutter_icons:
   android: "logoicon"
   ios: true
-  image_path: "assets/ruyahavuzu/icon.png"
+  image_path: "assets/ruyaci/icon.png"
 
 
 
 
 
-# flutter pub run change_app_package_name:main ruyahavuzu.financemoney.com
+# flutter pub run change_app_package_name:main ruyaci.financemoney.com
 # flutter pub run flutter_launcher_icons:main
 # flutter pub run flutter_app_name
 
@@ -58,4 +58,4 @@ flutter_icons:
 
 
 
-# flutter build appbundle --build-name=9.0.0 --build-number=9
+# flutter build appbundle --build-name=9.1.0 --build-number=10

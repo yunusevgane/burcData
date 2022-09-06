@@ -54,7 +54,8 @@ class DefaultFirebaseOptions {
     appId: '1:396948459576:android:e1ea6a520ac5879e55d6cd',
     messagingSenderId: '396948459576',
     projectId: 'ruyahavuzu',
-    databaseURL: 'https://ruyahavuzu-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://ruyahavuzu-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'ruyahavuzu.appspot.com',
   );
 
@@ -63,9 +64,11 @@ class DefaultFirebaseOptions {
     appId: '1:396948459576:ios:8ab43d7b5c4abbb155d6cd',
     messagingSenderId: '396948459576',
     projectId: 'ruyahavuzu',
-    databaseURL: 'https://ruyahavuzu-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://ruyahavuzu-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'ruyahavuzu.appspot.com',
-    iosClientId: '396948459576-io8icp8ur1kpb90tr5jncfn8k28kf9t3.apps.googleusercontent.com',
+    iosClientId:
+        '396948459576-io8icp8ur1kpb90tr5jncfn8k28kf9t3.apps.googleusercontent.com',
     iosBundleId: 'com.webyapar.ruyatabirleri',
   );
 }

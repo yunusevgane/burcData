@@ -14,7 +14,7 @@ class _anasayfaState extends State<anasayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffffffff),
+      backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: [
           Container(
@@ -36,7 +36,7 @@ class _anasayfaState extends State<anasayfa> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0xff1d71b8),
                           blurRadius: 10,
@@ -48,7 +48,7 @@ class _anasayfaState extends State<anasayfa> {
                         left: 20.0, right: 5.0, top: 5.0, bottom: 5.0),
                     child: TextField(
                       controller: text,
-                      style: TextStyle(
+                      style: const TextStyle(
                         decoration: TextDecoration.none,
                         fontSize: 20.0,
                         color: Colors.black,
@@ -68,12 +68,12 @@ class _anasayfaState extends State<anasayfa> {
 
                       decoration: InputDecoration(
                         hintStyle:
-                            TextStyle(fontSize: 20.0, color: Colors.grey),
+                            const TextStyle(fontSize: 20.0, color: Colors.grey),
                         border: InputBorder.none,
                         suffixIcon: CircleAvatar(
-                          backgroundColor: Color(0xff1d71b8),
+                          backgroundColor: const Color(0xff1d71b8),
                           child: IconButton(
-                              icon: Icon(Icons.search),
+                              icon: const Icon(Icons.search),
                               color: Colors.white,
                               onPressed: () {
                                 String chattext = text.text;

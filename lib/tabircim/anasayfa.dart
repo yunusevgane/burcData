@@ -15,9 +15,9 @@ class _anasayfaState extends State<anasayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: new AssetImage('assets/tabircim/bg.jpg'),
+            image: AssetImage('assets/tabircim/bg.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -43,7 +43,7 @@ class _anasayfaState extends State<anasayfa> {
                       ),
                       child: TextField(
                         controller: text,
-                        style: TextStyle(
+                        style: const TextStyle(
                           decoration: TextDecoration.none,
                           fontSize: 20.0,
                           color: Colors.black,
@@ -63,12 +63,12 @@ class _anasayfaState extends State<anasayfa> {
 
                         decoration: InputDecoration(
                           hintStyle:
-                              TextStyle(fontSize: 20.0, color: Colors.grey),
+                              const TextStyle(fontSize: 20.0, color: Colors.grey),
                           border: InputBorder.none,
                           suffixIcon: CircleAvatar(
-                            backgroundColor: Color(0xff204c7d),
+                            backgroundColor: const Color(0xff204c7d),
                             child: IconButton(
-                                icon: Icon(Icons.search),
+                                icon: const Icon(Icons.search),
                                 color: Colors.white,
                                 onPressed: () {
                                   String chattext = text.text;

@@ -14,7 +14,7 @@ class _anasayfaState extends State<anasayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff013233),
+      backgroundColor: const Color(0xff013233),
       body: Stack(
         children: [
           Container(
@@ -41,7 +41,7 @@ class _anasayfaState extends State<anasayfa> {
                     ),
                     child: TextField(
                       controller: text,
-                      style: TextStyle(
+                      style: const TextStyle(
                         decoration: TextDecoration.none,
                         fontSize: 20.0,
                         color: Colors.black,
@@ -61,12 +61,12 @@ class _anasayfaState extends State<anasayfa> {
 
                       decoration: InputDecoration(
                         hintStyle:
-                            TextStyle(fontSize: 20.0, color: Colors.grey),
+                            const TextStyle(fontSize: 20.0, color: Colors.grey),
                         border: InputBorder.none,
                         suffixIcon: CircleAvatar(
-                          backgroundColor: Color(0xff008C8F),
+                          backgroundColor: const Color(0xff008C8F),
                           child: IconButton(
-                              icon: Icon(Icons.search),
+                              icon: const Icon(Icons.search),
                               color: Colors.white,
                               onPressed: () {
                                 String chattext = text.text;

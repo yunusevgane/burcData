@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'package:flutter/services.dart' as rootBundle;
-import '/ruyahavuzu/reklam.dart';
 
 class arama extends StatefulWidget {
   String ara;
@@ -39,7 +38,7 @@ class _aramaState extends State<arama> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: Color(0xff1d71b8),
+        backgroundColor: const Color(0xff1d71b8),
       ),
       body: Stack(
         children: [
@@ -48,20 +47,19 @@ class _aramaState extends State<arama> {
               child:
                   Image.asset('assets/ruyahavuzu/home2.png', fit: BoxFit.fill)),
           Container(
-            margin: EdgeInsets.only(top: 5),
+            margin: const EdgeInsets.only(top: 5),
             alignment: Alignment.topCenter,
             child: aramainput(context),
           ),
           if (aradetay.length > 1)
             Container(
-              margin: EdgeInsets.only(bottom: 0, top: 70, left: 0, right: 0),
+              margin: const EdgeInsets.only(bottom: 0, top: 70, left: 0, right: 0),
               alignment: Alignment.center,
               child: FutureBuilder(
                 future: ReadJsonData(),
                 builder: (context, data) {
                   if (data.hasError) {
                     return bulunamadi();
-                    ;
                   } else if (data.hasData) {
                     var items = data.data as List<jsonsMap>;
                     int sayi = items == null ? 0 : items.length;
@@ -74,11 +72,11 @@ class _aramaState extends State<arama> {
                             return Column(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       top: 0, bottom: 0, left: 30, right: 30),
                                   width: MediaQuery.of(context).size.width,
                                   child: Card(
-                                    color: Color(0xff1d71b8),
+                                    color: const Color(0xff1d71b8),
                                     child: InkWell(
                                         onTap: () {
                                           Navigator.push(
@@ -99,54 +97,27 @@ class _aramaState extends State<arama> {
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                               items[index].ruya.toString(),
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: Colors.white)),
                                         )),
                                   ),
                                 ),
-                                if (index == 10 ||
-                                    index == 20 ||
-                                    index == 30 ||
-                                    index == 40 ||
-                                    index == 50 ||
-                                    index == 60 ||
-                                    index == 70 ||
-                                    index == 80 ||
-                                    index == 90 ||
-                                    index == 100 ||
-                                    index == 110 ||
-                                    index == 120 ||
-                                    index == 130 ||
-                                    index == 140 ||
-                                    index == 150 ||
-                                    index == 160 ||
-                                    index == 170 ||
-                                    index == 180 ||
-                                    index == 190 ||
-                                    index == 200 ||
-                                    index == 210 ||
-                                    index == 220 ||
-                                    index == 230 ||
-                                    index == 240 ||
-                                    index == 250)
-                                  Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    child: BannerReklam(),
-                                  ),
+                   
+                                
                               ],
                             );
                           });
                     }
                   } else {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                 },
               ),
             ),
-          if (aradetay.length < 1)
+          if (aradetay.isEmpty)
             Container(
               margin:
-                  EdgeInsets.only(bottom: 100, top: 100, left: 20, right: 20),
+                  const EdgeInsets.only(bottom: 100, top: 100, left: 20, right: 20),
               alignment: Alignment.center,
               child: bulunamadi(),
             ),
@@ -162,7 +133,7 @@ class _aramaState extends State<arama> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text("Rüya Bulunamadı.",
+            const Text("Rüya Bulunamadı.",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -170,7 +141,7 @@ class _aramaState extends State<arama> {
             const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "Ençok aranan rüyalar.",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -205,7 +176,7 @@ class _aramaState extends State<arama> {
 
   ActionChip chip(adi) {
     return ActionChip(
-        backgroundColor: Color(0xff2C5C5C),
+        backgroundColor: const Color(0xff2C5C5C),
         label: Text(adi),
         onPressed: () {
           Navigator.push(
@@ -227,7 +198,7 @@ class _aramaState extends State<arama> {
           right: 20.0,
         ),
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(50.0)),
             boxShadow: [
@@ -242,7 +213,7 @@ class _aramaState extends State<arama> {
               left: 0.0, right: 5.0, top: 5.0, bottom: 5.0),
           child: TextField(
             controller: text,
-            style: TextStyle(
+            style: const TextStyle(
               decoration: TextDecoration.none,
               fontSize: 20.0,
               color: Colors.black,
@@ -260,7 +231,7 @@ class _aramaState extends State<arama> {
             },
             decoration: InputDecoration(
               prefixIcon: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   size: 30.0,
                   color: Colors.black,
@@ -269,12 +240,12 @@ class _aramaState extends State<arama> {
                   Navigator.pop(context);
                 },
               ),
-              hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
+              hintStyle: const TextStyle(fontSize: 20.0, color: Colors.grey),
               border: InputBorder.none,
               suffixIcon: CircleAvatar(
-                backgroundColor: Color(0xff1d71b8),
+                backgroundColor: const Color(0xff1d71b8),
                 child: IconButton(
-                    icon: Icon(Icons.search),
+                    icon: const Icon(Icons.search),
                     color: Colors.white,
                     onPressed: () {
                       String chattext = text.text;
@@ -308,6 +279,5 @@ class _aramaState extends State<arama> {
     return list.map((i) => jsonsMap.fromJson(i)).toList();
   }
 }
-
 
 // SingleChildScrollView

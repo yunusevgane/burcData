@@ -1,6 +1,5 @@
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:flutter/material.dart';
-import '/ruyahavuzu/reklam.dart';
 import '/ruyahavuzu/arama.dart';
 
 class detay extends StatefulWidget {
@@ -19,7 +18,6 @@ class _detayState extends State<detay> {
   @override
   void initState() {
     super.initState();
-    resimReklam();
   }
 
   @override
@@ -29,28 +27,29 @@ class _detayState extends State<detay> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: Color(0xff1d71b8),
+        backgroundColor: const Color(0xff1d71b8),
       ),
       body: Stack(children: [
         Container(
-          margin: EdgeInsets.only(top: 5),
+          margin: const EdgeInsets.only(top: 5),
           alignment: Alignment.topCenter,
           child: aramainput(context),
         ),
         Container(
-          margin: EdgeInsets.only(bottom: 0, top: 70, left: 20, right: 20),
+          margin:
+              const EdgeInsets.only(bottom: 0, top: 70, left: 20, right: 20),
           alignment: Alignment.center,
           child: SingleChildScrollView(
               child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               color: Color(0xff1d71b8),
             ),
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
                 left: 10.0, right: 10.0, bottom: 20.0, top: 20.0),
             child: HtmlWidget(
               widget.detays,
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 color: Colors.white,
               ),
             ),
@@ -68,8 +67,6 @@ class _detayState extends State<detay> {
           right: 20.0,
         ),
         child: Container(
-          
-          
           padding: const EdgeInsets.only(
               left: 0.0, right: 5.0, top: 5.0, bottom: 5.0),
           decoration: const BoxDecoration(
@@ -85,7 +82,7 @@ class _detayState extends State<detay> {
           ),
           child: TextField(
             controller: text,
-            style: TextStyle(
+            style: const TextStyle(
               decoration: TextDecoration.none,
               fontSize: 20.0,
               color: Colors.black,
@@ -103,7 +100,7 @@ class _detayState extends State<detay> {
             },
             decoration: InputDecoration(
               prefixIcon: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   size: 30.0,
                   color: Colors.black,
@@ -112,12 +109,12 @@ class _detayState extends State<detay> {
                   Navigator.pop(context);
                 },
               ),
-              hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
+              hintStyle: const TextStyle(fontSize: 20.0, color: Colors.grey),
               border: InputBorder.none,
               suffixIcon: CircleAvatar(
-                backgroundColor: Color(0xff1d71b8),
+                backgroundColor: const Color(0xff1d71b8),
                 child: IconButton(
-                    icon: Icon(Icons.search),
+                    icon: const Icon(Icons.search),
                     color: Colors.white,
                     onPressed: () {
                       String chattext = text.text;
@@ -139,6 +136,5 @@ class _detayState extends State<detay> {
     );
   }
 }
-
 
 // SingleChildScrollView

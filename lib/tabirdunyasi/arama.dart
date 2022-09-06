@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'package:flutter/services.dart' as rootBundle;
-import '/tabirdunyasi/reklam.dart';
 
 class arama extends StatefulWidget {
   String ara;
@@ -38,7 +37,7 @@ class _aramaState extends State<arama> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: Color(0xff2d5c5d),
+        backgroundColor: const Color(0xff2d5c5d),
       ),
       body: Stack(
         children: [
@@ -51,20 +50,20 @@ class _aramaState extends State<arama> {
               child:
                   Image.asset('assets/tabirdunyasi/ic2.png', fit: BoxFit.fill)),
           Container(
-            margin: EdgeInsets.only(top: 5),
+            margin: const EdgeInsets.only(top: 5),
             alignment: Alignment.topCenter,
             child: aramainput(context),
           ),
           if (aradetay.length > 1)
             Container(
-              margin: EdgeInsets.only(bottom: 100, top: 100, left: 0, right: 0),
+              margin: const EdgeInsets.only(
+                  bottom: 100, top: 100, left: 0, right: 0),
               alignment: Alignment.center,
               child: FutureBuilder(
                 future: ReadJsonData(),
                 builder: (context, data) {
                   if (data.hasError) {
                     return bulunamadi();
-                    ;
                   } else if (data.hasData) {
                     var items = data.data as List<jsonsMap>;
                     int sayi = items == null ? 0 : items.length;
@@ -77,11 +76,11 @@ class _aramaState extends State<arama> {
                             return Column(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       top: 0, bottom: 0, left: 30, right: 30),
                                   width: MediaQuery.of(context).size.width,
                                   child: Card(
-                                    color: Color(0xff2C5C5C),
+                                    color: const Color(0xff2C5C5C),
                                     child: InkWell(
                                         onTap: () {
                                           Navigator.push(
@@ -102,54 +101,25 @@ class _aramaState extends State<arama> {
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                               items[index].ruya.toString(),
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: Colors.white)),
                                         )),
                                   ),
                                 ),
-                                if (index == 10 ||
-                                    index == 20 ||
-                                    index == 30 ||
-                                    index == 40 ||
-                                    index == 50 ||
-                                    index == 60 ||
-                                    index == 70 ||
-                                    index == 80 ||
-                                    index == 90 ||
-                                    index == 100 ||
-                                    index == 110 ||
-                                    index == 120 ||
-                                    index == 130 ||
-                                    index == 140 ||
-                                    index == 150 ||
-                                    index == 160 ||
-                                    index == 170 ||
-                                    index == 180 ||
-                                    index == 190 ||
-                                    index == 200 ||
-                                    index == 210 ||
-                                    index == 220 ||
-                                    index == 230 ||
-                                    index == 240 ||
-                                    index == 250)
-                                  Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    child: BannerReklam(),
-                                  ),
                               ],
                             );
                           });
                     }
                   } else {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                 },
               ),
             ),
-          if (aradetay.length < 1)
+          if (aradetay.isEmpty)
             Container(
-              margin:
-                  EdgeInsets.only(bottom: 100, top: 100, left: 20, right: 20),
+              margin: const EdgeInsets.only(
+                  bottom: 100, top: 100, left: 20, right: 20),
               alignment: Alignment.center,
               child: bulunamadi(),
             ),
@@ -165,7 +135,7 @@ class _aramaState extends State<arama> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text("Rüya Bulunamadı.",
+            const Text("Rüya Bulunamadı.",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -173,7 +143,7 @@ class _aramaState extends State<arama> {
             const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "Ençok aranan rüyalar.",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -208,7 +178,7 @@ class _aramaState extends State<arama> {
 
   ActionChip chip(adi) {
     return ActionChip(
-        backgroundColor: Color(0xff2C5C5C),
+        backgroundColor: const Color(0xff2C5C5C),
         label: Text(adi),
         onPressed: () {
           Navigator.push(
@@ -238,7 +208,7 @@ class _aramaState extends State<arama> {
           ),
           child: TextField(
             controller: text,
-            style: TextStyle(
+            style: const TextStyle(
               decoration: TextDecoration.none,
               fontSize: 20.0,
               color: Colors.black,
@@ -256,7 +226,7 @@ class _aramaState extends State<arama> {
             },
             decoration: InputDecoration(
               prefixIcon: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   size: 30.0,
                   color: Colors.black,
@@ -265,12 +235,12 @@ class _aramaState extends State<arama> {
                   Navigator.pop(context);
                 },
               ),
-              hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
+              hintStyle: const TextStyle(fontSize: 20.0, color: Colors.grey),
               border: InputBorder.none,
               suffixIcon: CircleAvatar(
-                backgroundColor: Color(0xff008C8F),
+                backgroundColor: const Color(0xff008C8F),
                 child: IconButton(
-                    icon: Icon(Icons.search),
+                    icon: const Icon(Icons.search),
                     color: Colors.white,
                     onPressed: () {
                       String chattext = text.text;
@@ -304,6 +274,5 @@ class _aramaState extends State<arama> {
     return list.map((i) => jsonsMap.fromJson(i)).toList();
   }
 }
-
 
 // SingleChildScrollView

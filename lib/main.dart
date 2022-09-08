@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
-import '/ruyaci/firebase_options.dart';
-import '/ruyaci/anasayfa.dart';
+import 'firebase_options.dart';
+import 'anasayfa.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();

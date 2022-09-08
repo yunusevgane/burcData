@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tabirdunyasi">
+    package="ruya5.financemoney.com">
    <application
-        android:label="tabirdunyasi"
+        android:label="Tabir Dünyası"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/logoicon">
         <activity
             android:name=".MainActivity"
             android:exported="true"

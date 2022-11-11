@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ruya5.financemoney.com">
+    package="com.shemaster.tabirdunyasi">
    <application
         android:label="Tabir Dünyası"
         android:name="${applicationName}"

@@ -48,12 +48,13 @@ flutter_icons:
   android: "logoicon"
   ios: true
   image_path: "assets/icon.png"
-# flutter pub run change_app_package_name:main com.shemaster.tabirdunyasi
+# flutter pub run change_app_package_name:main com.tabir.dunyasi
 # flutter pub run flutter_launcher_icons:main
 # flutter pub run flutter_app_name
 
 
 # flutter build appbundle
+# flutter build apk
 
 # dart fix --dry-run
 # dart fix --apply

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '/arama.dart';
-import 'local_notification_service.dart';
 import 'package:intl/intl.dart';
 
 class anasayfa extends StatefulWidget {
@@ -24,49 +23,8 @@ String baslik = DateFormat('dd / MM / yyyy').format(now);
 
 class _anasayfaState extends State<anasayfa>
     with SingleTickerProviderStateMixin {
-  late final LocalNotificationService service;
-
-  bildirim() async {
-    await service.showScheduledNotification(
-      id: 1000,
-      title: 'Tabir Dünyası',
-      body: 'Rüyanı yorumlayalım ister misin?',
-      date: DateTime.now().add(const Duration(seconds: 10)),
-    );
-
-    for (int i = 1; i < 16; i++) {
-      var tarih = DateTime.now();
-      var gun = tarih.day.toString();
-      var ay = tarih.month.toString();
-      var yil = tarih.year.toString();
-      if (tarih.day < 10) {
-        gun = '0$gun';
-      }
-      if (tarih.month < 10) {
-        ay = '0$ay';
-      }
-
-      DateTime datem =
-          DateTime.parse('$yil-$ay-$gun 10:00:04Z').add(Duration(days: i));
-
-      await service.showScheduledNotification(
-        id: int.parse(datem.year.toString() +
-            datem.month.toString() +
-            datem.day.toString()),
-        title: 'Tabir Dünyası',
-        body: 'Rüyanı yorumlayalım ister misin?',
-        date: datem,
-      );
-    }
-  }
-
   @override
   void initState() {
-    service = LocalNotificationService();
-    service.intialize();
-
-    bildirim();
-
     super.initState();
   }
 

@@ -21,7 +21,6 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   flutter_launcher_icons: ^0.10.0
   flutter_app_name: ^0.1.1
-  flutter_local_notifications: ^9.9.1
   rxdart: ^0.27.5
   intl: ^0.17.0
 
@@ -52,9 +51,15 @@ flutter_icons:
 # flutter pub run flutter_launcher_icons:main
 # flutter pub run flutter_app_name
 
-
 # flutter build appbundle
 # flutter build apk
+
+
+# flutter clean
+# flutter pub get
+# cd ios 
+# pod deintegrate
+# pod install
 
 # dart fix --dry-run
 # dart fix --apply
